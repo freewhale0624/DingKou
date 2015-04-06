@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
+  resources :messages, only: [:index, :create]
+  resources :posts
 
   get 'setInitTime' => 'setting#edit_init_time', as: :edit_init_time
   post 'setInitTime' => 'setting#update_init_time', as: :update_init_time

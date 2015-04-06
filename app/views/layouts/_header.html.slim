@@ -16,12 +16,15 @@ nav.navbar.navbar-default
           = link_to "少昊時刻表", root_path
         li
           = link_to "GF 自動領獎", gf_easy_solution_path
+        li.dropdown
+          a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+            | 分享完美
+            span.caret
+          ul.dropdown-menu role="menu"
+            li: a[href="#"] Ding.Kou 一言堂
+            li: a[href="#"] 黑君的碎碎念
         li
-          a Ding.Kou 一言堂
-        li
-          a 黑君的碎碎念
-        li
-          a 留言板
+          = link_to "留言板", messages_path
 
       / RIGHT
       ul.nav.navbar-nav.navbar-right
